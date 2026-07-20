@@ -1,10 +1,5 @@
 const byId = (id) => document.getElementById(id);
 
-byId('favorites-toggle').addEventListener('click', () => {
-  const feedback = byId('search-feedback');
-  feedback.textContent = 'Favorites will be available when buyer accounts are enabled.';
-});
-
 const worldwideToggle = byId('worldwide-toggle');
 const worldwideList = byId('worldwide-list');
 const marketsToggle = byId('markets-toggle');
@@ -21,11 +16,6 @@ const supplierToggle = byId('supplier-form-toggle');
 const supplierForm = byId('supplier-form');
 supplierToggle.addEventListener('click', () => {
   supplierForm.hidden = !supplierForm.hidden;
-  if (!supplierForm.hidden) supplierForm.querySelector('input').focus();
-});
-supplierForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  byId('supplier-feedback').textContent = 'Supplier request saved for review. We will contact you when supplier onboarding is enabled.';
 });
 
 byId('market-search').addEventListener('submit', (event) => {
@@ -46,5 +36,15 @@ document.querySelectorAll('[data-category]').forEach((link) => {
     const category = link.dataset.category;
     byId('equipment-search').value = category;
     byId('search-feedback').textContent = `${category}: category selected. Listings will appear as the marketplace catalogue is populated.`;
+  });
+});
+
+document.querySelectorAll('[data-market]').forEach((link) => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('[data-market]').forEach((item) => item.classList.remove('is-selected'));
+    link.classList.add('is-selected');
+    worldwideList.hidden = true;
+    marketsList.hidden = true;
+    byId('search-feedback').textContent = `${link.dataset.market}: market route selected. Listings will appear as verified suppliers join.`;
   });
 });

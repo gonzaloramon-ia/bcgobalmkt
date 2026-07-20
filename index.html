@@ -9,6 +9,7 @@
   <meta property="og:title" content="BillCounter Global Marketplace">
   <meta property="og:description" content="Connecting buyers and suppliers worldwide for cash-handling equipment.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/cash-handling-hero-v1.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,10 +26,6 @@
         <a href="#resources">Resources</a>
       </nav>
 
-      <div class="header-icons" aria-label="Quick actions">
-        <button class="icon-button" id="favorites-toggle" aria-label="View favorites">♡</button>
-        <a class="icon-button person-icon" href="#partner" aria-label="Supplier account">♙</a>
-      </div>
     </div>
   </header>
 
@@ -42,13 +39,13 @@
         </form>
         <p class="search-feedback" id="search-feedback" role="status"></p>
 
-        <div class="world-grid" aria-hidden="true"></div>
         <div class="platform-wrap">
-          <div class="machine-stage" aria-label="Browse equipment categories">
-            <a class="machine-link bill-counter" href="#marketplace" data-category="Bill Counters" aria-label="Browse Bill Counters"><span class="machine machine-counter"><i></i><b></b><em></em></span></a>
-            <a class="machine-link bill-sorter" href="#marketplace" data-category="Bill Sorters & Discriminators" aria-label="Browse Bill Sorters and Discriminators"><span class="machine machine-sorter"><i></i><b></b><em></em></span></a>
-            <a class="machine-link coin-sorter" href="#marketplace" data-category="Coin Counters & Sorters" aria-label="Browse Coin Counters and Sorters"><span class="machine machine-coin"><i></i><b></b><em></em></span></a>
-            <a class="machine-link big-cash" href="#marketplace" data-category="Big Cash Management" aria-label="Browse Big Cash Management"><span class="machine machine-cash"><i></i><b></b><em></em></span></a>
+          <div class="hero-equipment" aria-label="Browse equipment categories">
+            <img src="assets/cash-handling-hero-v1.png" alt="Banknote counter, banknote sorter, coin sorter and cash management equipment on a display platform.">
+            <a class="hero-hotspot hotspot-counter" href="#marketplace" data-category="Bill Counters" aria-label="Browse Bill Counters"></a>
+            <a class="hero-hotspot hotspot-sorter" href="#marketplace" data-category="Bill Sorters & Discriminators" aria-label="Browse Bill Sorters and Discriminators"></a>
+            <a class="hero-hotspot hotspot-coin" href="#marketplace" data-category="Coin Counters & Sorters" aria-label="Browse Coin Counters and Sorters"></a>
+            <a class="hero-hotspot hotspot-cash" href="#marketplace" data-category="Big Cash Management" aria-label="Browse Big Cash Management"></a>
           </div>
 
           <div class="category-dock" aria-label="Equipment categories">
@@ -69,7 +66,7 @@
     <section class="markets shell" id="markets">
       <h2>Find suppliers by market</h2>
       <div class="market-buttons">
-        <a href="#marketplace"><span>🇺🇸</span> USA</a><a href="#marketplace"><span>🇬🇧</span> UK</a><a href="#marketplace"><span>🇫🇷</span> FR</a><a href="#marketplace"><span>🇯🇵</span> JP</a><a href="#marketplace"><span>🇦🇷</span> ARG</a>
+        <a href="#marketplace" data-market="USA"><span>🇺🇸</span> USA</a><a href="#marketplace" data-market="UK"><span>🇬🇧</span> UK</a><a href="#marketplace" data-market="France"><span>🇫🇷</span> FR</a><a href="#marketplace" data-market="Japan"><span>🇯🇵</span> JP</a><a href="#marketplace" data-market="Argentina"><span>🇦🇷</span> ARG</a>
         <button type="button" id="worldwide-toggle"><span>◎</span> Worldwide Suppliers</button>
         <button type="button" id="markets-toggle"><span>⊞</span> Other Markets</button>
       </div>
@@ -93,24 +90,18 @@
       </div>
 
       <div class="service-points">
-        <div><span>◎</span><p><strong>Global Marketplace</strong>Access suppliers and products<br>from around the world.</p></div>
-        <div><span>♢</span><p><strong>Secure &amp; Trusted</strong>Verified suppliers and secure<br>transactions.</p></div>
-        <div><span>▱</span><p><strong>Reliable Shipping</strong>Global logistics partnerships<br>for on-time delivery.</p></div>
+        <div><span>◎</span><p><strong>Specialized Marketplace</strong>Cash-handling equipment only,<br>across international markets.</p></div>
+        <div><span>♢</span><p><strong>Verified Profiles</strong>Supplier review and reputation<br>before product listings go live.</p></div>
+        <div><span>↗</span><p><strong>Direct Connection</strong>Contact the seller to arrange<br>payment and delivery.</p></div>
       </div>
     </section>
 
     <section class="partner shell" id="partner">
       <div class="partner-symbol" aria-hidden="true">⌂</div>
       <div><h2>Are you a manufacturer or distributor?</h2><p>Join BillCounter Global and grow your business with qualified buyers from around the world.</p></div>
-      <button class="partner-button" id="supplier-form-toggle" type="button">Become a supplier <span>›</span></button>
+      <button class="partner-button" id="supplier-form-toggle" type="button">Supplier onboarding <span>›</span></button>
       <ul><li>Increase global visibility</li><li>Generate quality leads</li><li>Build trusted relationships</li><li>Grow your business</li></ul>
-      <form class="supplier-form" id="supplier-form" hidden>
-        <label>Company<input required name="company" autocomplete="organization" placeholder="Your company"></label>
-        <label>Business email<input required name="email" type="email" autocomplete="email" placeholder="you@company.com"></label>
-        <label>Primary market<select name="market"><option>United States</option><option>United Kingdom</option><option>France</option><option>Japan</option><option>Argentina</option><option>Other market</option></select></label>
-        <button type="submit">Send supplier request</button>
-        <p id="supplier-feedback" role="status"></p>
-      </form>
+      <p class="supplier-note" id="supplier-form" hidden>Supplier onboarding is being prepared. Profiles will be reviewed before their first listing is published.</p>
     </section>
   </main>
 

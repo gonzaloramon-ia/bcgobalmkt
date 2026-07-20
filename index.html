@@ -3,62 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BillCounter Global connects businesses with verified suppliers of banknote counters, currency sorters and cash-handling equipment.">
-  <title>BillCounter Global | Cash-handling equipment network</title>
-  <meta property="og:title" content="BillCounter Global | Cash-handling equipment network">
-  <meta property="og:description" content="Find banknote counters, currency sorters and cash-handling partners by market.">
+  <meta name="description" content="BillCounter Global Marketplace connects buyers with cash-handling equipment suppliers worldwide.">
+  <meta name="theme-color" content="#f5fbff">
+  <title>BillCounter Global Marketplace | Cash Handling</title>
+  <meta property="og:title" content="BillCounter Global Marketplace">
+  <meta property="og:description" content="Connecting buyers and suppliers worldwide for cash-handling equipment.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://billcounterglobal.com/assets/img/linea-productos.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="" aria-label="BillCounter Global home"><span class="brand-mark">B</span><span>BillCounter <strong>Global</strong></span></a>
+      <a class="brand" href="#top" aria-label="BillCounter Global Marketplace home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span>
+      </a>
+
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#solutions">Solutions</a>
-        <a href="#markets">Markets</a>
-        <a href="#partners">For suppliers</a>
-        <a href="#about">About</a>
+        <a href="#categories">Browse Categories</a>
+        <a href="#markets">Find Suppliers</a>
+        <a href="#resources">Resources</a>
       </nav>
-      <div class="header-actions"><a class="language" href="#">EN</a><a class="button button-dark" href="#request">Request a quote</a></div>
+
+      <div class="header-icons" aria-label="Quick actions">
+        <button class="icon-button" id="language-toggle" aria-label="Choose language" aria-expanded="false">◎</button>
+        <button class="icon-button" id="favorites-toggle" aria-label="View favorites">♡</button>
+        <a class="icon-button person-icon" href="#partner" aria-label="Supplier account">♙</a>
+        <div class="popover language-popover" id="language-menu" hidden>
+          <a href="#top">English</a><a href="#top">Français</a><a href="#top">Español</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="kicker">Cash handling, connected</p>
-          <h1>Find the right equipment for the way money moves.</h1>
-          <p class="hero-lead">BillCounter Global connects businesses, distributors and cash-handling specialists across markets.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#solutions">Explore solutions <span aria-hidden="true">→</span></a><a class="text-link" href="#partners">Become a partner <span aria-hidden="true">↗</span></a></div>
-          <div class="hero-proof"><span><strong>01</strong> Compare solutions</span><span><strong>02</strong> Request qualified guidance</span><span><strong>03</strong> Connect locally</span></div>
-        </div>
-        <div class="hero-visual" aria-label="Cash handling equipment showcase">
-          <div class="visual-glow"></div><div class="machine machine-one"></div><div class="machine machine-two"></div><div class="machine machine-three"></div>
-          <div class="visual-caption"><span>Global equipment network</span><strong>Count. Sort. Secure.</strong></div>
+  <main id="top">
+    <section class="showcase" id="categories">
+      <div class="shell">
+        <form class="search-bar" id="market-search" role="search">
+          <label class="search-input"><span aria-hidden="true">⌕</span><input id="equipment-search" type="search" placeholder="Search cash-handling equipment, brands, suppliers..." autocomplete="off"></label>
+          <label class="search-select"><select id="category-search" aria-label="Category"><option value="">All Categories</option><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label>
+          <button type="submit" class="search-submit" aria-label="Search">⌕</button>
+        </form>
+        <p class="search-feedback" id="search-feedback" role="status"></p>
+
+        <div class="world-grid" aria-hidden="true"></div>
+        <div class="platform-wrap">
+          <div class="machine-stage" aria-label="Browse equipment categories">
+            <a class="machine-link bill-counter" href="#marketplace" data-category="Bill Counters" aria-label="Browse Bill Counters"><span class="machine machine-counter"><i></i><b></b><em></em></span></a>
+            <a class="machine-link bill-sorter" href="#marketplace" data-category="Bill Sorters & Discriminators" aria-label="Browse Bill Sorters and Discriminators"><span class="machine machine-sorter"><i></i><b></b><em></em></span></a>
+            <a class="machine-link coin-sorter" href="#marketplace" data-category="Coin Counters & Sorters" aria-label="Browse Coin Counters and Sorters"><span class="machine machine-coin"><i></i><b></b><em></em></span></a>
+            <a class="machine-link big-cash" href="#marketplace" data-category="Big Cash Management" aria-label="Browse Big Cash Management"><span class="machine machine-cash"><i></i><b></b><em></em></span></a>
+          </div>
+
+          <div class="category-dock" aria-label="Equipment categories">
+            <a href="#marketplace" data-category="Bill Counters"><span class="dock-icon">▤</span><span>Bill Counters</span><b>›</b></a>
+            <a href="#marketplace" data-category="Bill Sorters & Discriminators"><span class="dock-icon">▥</span><span>Bill Sorters &amp;<br>Discriminators</span><b>›</b></a>
+            <a href="#marketplace" data-category="Coin Counters & Sorters"><span class="dock-icon">◉</span><span>Coin Counters &amp;<br>Sorters</span><b>›</b></a>
+            <a href="#marketplace" data-category="Big Cash Management"><span class="dock-icon">♢</span><span>Big Cash<br>Management</span><b>›</b></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="solutions">
-      <div class="shell"><div class="section-heading"><div><p class="kicker">Browse by need</p><h2>Cash-handling solutions</h2></div><p>From daily counting to high-volume processing, find the category that fits your operation.</p></div>
-        <div class="solution-grid">
-          <a class="solution-card featured" href="#request"><span class="card-number">01</span><span class="card-icon">▦</span><h3>Banknote counters</h3><p>Fast counting with counterfeit detection for retail, offices and cash rooms.</p><span class="card-link">Explore counters →</span></a>
-          <a class="solution-card" href="#request"><span class="card-number">02</span><span class="card-icon">◫</span><h3>Currency sorters</h3><p>Denomination recognition, valuation, orientation and serial-number scanning.</p><span class="card-link">Explore sorters →</span></a>
-          <a class="solution-card" href="#request"><span class="card-number">03</span><span class="card-icon">◎</span><h3>Cash-room equipment</h3><p>Solutions for banks, transport, wholesalers and high-volume operations.</p><span class="card-link">View solutions →</span></a>
-        </div>
+    <section class="intro shell" id="marketplace">
+      <h1>Specialized Marketplace<br>for Cash Handling.</h1>
+      <p>BillCounter Global connects businesses with verified suppliers of cash-handling equipment and solutions. Find the right technology. Build trusted partnerships. Grow your business.</p>
+    </section>
+
+    <section class="markets shell" id="markets">
+      <h2>Find suppliers by market</h2>
+      <div class="market-buttons">
+        <a href="#marketplace"><span>🇺🇸</span> USA</a><a href="#marketplace"><span>🇬🇧</span> UK</a><a href="#marketplace"><span>🇫🇷</span> FR</a><a href="#marketplace"><span>🇯🇵</span> JP</a><a href="#marketplace"><span>🇦🇷</span> ARG</a>
+        <button type="button" id="worldwide-toggle"><span>◎</span> Worldwide Suppliers</button>
+        <button type="button" id="markets-toggle"><span>⊞</span> Other Markets</button>
+      </div>
+      <div class="market-dropdown" id="worldwide-list" hidden>
+        <strong>Suppliers shipping worldwide</strong>
+        <div class="supplier-pills"><span>Verified manufacturer</span><span>Gold supplier</span><span>Multi-market distributor</span><span>International support</span></div>
+      </div>
+      <div class="market-dropdown country-list" id="other-markets-list" hidden>
+        <strong>Other Markets</strong>
+        <div><span>Germany</span><span>Italy</span><span>Spain</span><span>Portugal</span><span>Netherlands</span><span>Belgium</span><span>Switzerland</span><span>Sweden</span><span>Norway</span><span>Denmark</span><span>Poland</span><span>Turkey</span><span>Mexico</span><span>Brazil</span><span>Chile</span><span>Colombia</span><span>Peru</span><span>Australia</span><span>South Korea</span><span>India</span></div>
       </div>
     </section>
 
-    <section class="section section-soft" id="markets"><div class="shell market-layout"><div><p class="kicker">A local route to a global category</p><h2>Explore equipment by market.</h2><p class="body-copy">Specifications, currencies, service and availability vary by country. We connect each request with the right local route.</p><a class="button button-outline" href="#request">Tell us your market</a></div><div class="market-list"><a href="#request"><span>🇺🇸</span><strong>United States</strong><small>Banknote counters & sorters</small><span>→</span></a><a href="#request"><span>🇬🇧</span><strong>United Kingdom</strong><small>Note counters & cash rooms</small><span>→</span></a><a href="#request"><span>🇫🇷</span><strong>France</strong><small>Compteuses & trieuses</small><span>→</span></a><a href="#request"><span>🌐</span><strong>Other markets</strong><small>Request a local route</small><span>→</span></a></div></div></section>
+    <section class="trust shell" id="resources">
+      <h2>Trusted suppliers. Reliable partnerships.</h2>
+      <div class="trust-grid">
+        <article><span class="medal verified">✓</span><h3>Verified Supplier</h3><p>Passed identity and<br>business verification.</p></article>
+        <article><span class="medal silver">★</span><h3>Silver Supplier</h3><p>Proven track record of<br>quality and service.</p></article>
+        <article><span class="medal gold">★</span><h3>Gold Supplier</h3><p>High performance in<br>delivery and ratings.</p></article>
+        <article><span class="medal top">★</span><h3>Top-Rated Supplier</h3><p>Top ratings from buyers<br>worldwide.</p></article>
+      </div>
 
-    <section class="section" id="partners"><div class="shell partner-banner"><div><p class="kicker">For manufacturers and distributors</p><h2>Turn market demand into qualified conversations.</h2><p class="body-copy">Join a focused network for cash-handling equipment. Keep your commercial identity while gaining a clearer route to buyers.</p></div><a class="button button-dark" href="#request">Talk to the partner team <span aria-hidden="true">→</span></a></div></section>
+      <div class="service-points">
+        <div><span>◎</span><p><strong>Global Marketplace</strong>Access suppliers and products<br>from around the world.</p></div>
+        <div><span>♢</span><p><strong>Secure &amp; Trusted</strong>Verified suppliers and secure<br>transactions.</p></div>
+        <div><span>▱</span><p><strong>Reliable Shipping</strong>Global logistics partnerships<br>for on-time delivery.</p></div>
+      </div>
+    </section>
 
-    <section class="section request-section" id="request"><div class="shell request-grid"><div><p class="kicker">Start with a conversation</p><h2>Tell us what you need to count, sort or secure.</h2><p class="body-copy">Share your market and operation. We will route your request to the most relevant solution or partner.</p></div><form class="request-form" action="#" method="post"><label for="market">Market</label><select id="market" name="market"><option value="">Select a market</option><option>United States</option><option>United Kingdom</option><option>France</option><option>Other</option></select><label for="need">What are you looking for?</label><select id="need" name="need"><option value="">Select a solution</option><option>Banknote counter</option><option>Currency sorter</option><option>Cash-room equipment</option><option>Partnership</option></select><label for="email">Business email</label><input id="email" name="email" type="email" placeholder="you@company.com" required><button class="button button-primary" type="submit">Send request <span aria-hidden="true">→</span></button><p class="form-note">No payment is taken here. This is an initial qualified inquiry.</p></form></div></section>
+    <section class="partner shell" id="partner">
+      <div class="partner-symbol" aria-hidden="true">⌂</div>
+      <div><h2>Are you a manufacturer or distributor?</h2><p>Join BillCounter Global and grow your business with qualified buyers from around the world.</p></div>
+      <a class="partner-button" href="mailto:partners@billcounterglobal.com?subject=Become%20a%20supplier">Become a supplier <span>›</span></a>
+      <ul><li>Increase global visibility</li><li>Generate quality leads</li><li>Build trusted relationships</li><li>Grow your business</li></ul>
+    </section>
   </main>
 
-  <footer class="site-footer" id="about"><div class="shell footer-inner"><div><a class="brand brand-footer" href=""><span class="brand-mark">B</span><span>BillCounter <strong>Global</strong></span></a><p>Specialized discovery for cash-handling equipment and local partner networks.</p></div><div><h3>Explore</h3><a href="#solutions">Solutions</a><a href="#markets">Markets</a><a href="#partners">Partners</a></div><div><h3>Contact</h3><a href="#request">Request a quote</a><a href="#request">Become a partner</a></div></div><div class="shell copyright">© 2026 BillCounter Global · A Punto Smart Group company</div></footer>
+  <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer>
+  <script src="script.js"></script>
 </body>
 </html>

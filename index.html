@@ -26,12 +26,8 @@
       </nav>
 
       <div class="header-icons" aria-label="Quick actions">
-        <button class="icon-button" id="language-toggle" aria-label="Choose language" aria-expanded="false">◎</button>
         <button class="icon-button" id="favorites-toggle" aria-label="View favorites">♡</button>
         <a class="icon-button person-icon" href="#partner" aria-label="Supplier account">♙</a>
-        <div class="popover language-popover" id="language-menu" hidden>
-          <a href="#top">English</a><a href="#top">Français</a><a href="#top">Español</a>
-        </div>
       </div>
     </div>
   </header>
@@ -106,8 +102,15 @@
     <section class="partner shell" id="partner">
       <div class="partner-symbol" aria-hidden="true">⌂</div>
       <div><h2>Are you a manufacturer or distributor?</h2><p>Join BillCounter Global and grow your business with qualified buyers from around the world.</p></div>
-      <a class="partner-button" href="mailto:partners@billcounterglobal.com?subject=Become%20a%20supplier">Become a supplier <span>›</span></a>
+      <button class="partner-button" id="supplier-form-toggle" type="button">Become a supplier <span>›</span></button>
       <ul><li>Increase global visibility</li><li>Generate quality leads</li><li>Build trusted relationships</li><li>Grow your business</li></ul>
+      <form class="supplier-form" id="supplier-form" hidden>
+        <label>Company<input required name="company" autocomplete="organization" placeholder="Your company"></label>
+        <label>Business email<input required name="email" type="email" autocomplete="email" placeholder="you@company.com"></label>
+        <label>Primary market<select name="market"><option>United States</option><option>United Kingdom</option><option>France</option><option>Japan</option><option>Argentina</option><option>Other market</option></select></label>
+        <button type="submit">Send supplier request</button>
+        <p id="supplier-feedback" role="status"></p>
+      </form>
     </section>
   </main>
 

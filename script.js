@@ -1,13 +1,5 @@
 const byId = (id) => document.getElementById(id);
 
-const languageToggle = byId('language-toggle');
-const languageMenu = byId('language-menu');
-languageToggle.addEventListener('click', () => {
-  const open = languageMenu.hidden;
-  languageMenu.hidden = !open;
-  languageToggle.setAttribute('aria-expanded', String(open));
-});
-
 byId('favorites-toggle').addEventListener('click', () => {
   const feedback = byId('search-feedback');
   feedback.textContent = 'Favorites will be available when buyer accounts are enabled.';
@@ -24,6 +16,17 @@ function toggleList(target, other) {
 }
 worldwideToggle.addEventListener('click', () => toggleList(worldwideList, marketsList));
 marketsToggle.addEventListener('click', () => toggleList(marketsList, worldwideList));
+
+const supplierToggle = byId('supplier-form-toggle');
+const supplierForm = byId('supplier-form');
+supplierToggle.addEventListener('click', () => {
+  supplierForm.hidden = !supplierForm.hidden;
+  if (!supplierForm.hidden) supplierForm.querySelector('input').focus();
+});
+supplierForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  byId('supplier-feedback').textContent = 'Supplier request saved for review. We will contact you when supplier onboarding is enabled.';
+});
 
 byId('market-search').addEventListener('submit', (event) => {
   event.preventDefault();
@@ -44,11 +47,4 @@ document.querySelectorAll('[data-category]').forEach((link) => {
     byId('equipment-search').value = category;
     byId('search-feedback').textContent = `${category}: category selected. Listings will appear as the marketplace catalogue is populated.`;
   });
-});
-
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.header-icons')) {
-    languageMenu.hidden = true;
-    languageToggle.setAttribute('aria-expanded', 'false');
-  }
 });

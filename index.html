@@ -21,8 +21,8 @@
       </a>
 
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#categories">Browse Categories</a>
-        <a href="#markets">Find Suppliers</a>
+        <a href="catalog.html">Browse Categories</a>
+        <a href="catalog.html#markets">Find Suppliers</a>
         <a href="#resources">Resources</a>
       </nav>
 
@@ -32,9 +32,9 @@
   <main id="top">
     <section class="showcase" id="categories">
       <div class="shell">
-        <form class="search-bar" id="market-search" role="search">
-          <label class="search-input"><span aria-hidden="true">⌕</span><input id="equipment-search" type="search" placeholder="Search cash-handling equipment, brands, suppliers..." autocomplete="off"></label>
-          <label class="search-select"><select id="category-search" aria-label="Category"><option value="">All Categories</option><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label>
+        <form class="search-bar" id="market-search" role="search" action="catalog.html">
+          <label class="search-input"><span aria-hidden="true">⌕</span><input id="equipment-search" name="q" type="search" placeholder="Search cash-handling equipment, brands, suppliers..." autocomplete="off"></label>
+          <label class="search-select"><select id="category-search" name="category" aria-label="Category"><option value="">All Categories</option><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label>
           <button type="submit" class="search-submit" aria-label="Search">⌕</button>
         </form>
         <p class="search-feedback" id="search-feedback" role="status"></p>
@@ -42,17 +42,17 @@
         <div class="platform-wrap">
           <div class="hero-equipment" aria-label="Browse equipment categories">
             <img src="assets/cash-handling-hero-v1.png" alt="Banknote counter, banknote sorter, coin sorter and cash management equipment on a display platform.">
-            <a class="hero-hotspot hotspot-counter" href="#marketplace" data-category="Bill Counters" aria-label="Browse Bill Counters"></a>
-            <a class="hero-hotspot hotspot-sorter" href="#marketplace" data-category="Bill Sorters & Discriminators" aria-label="Browse Bill Sorters and Discriminators"></a>
-            <a class="hero-hotspot hotspot-coin" href="#marketplace" data-category="Coin Counters & Sorters" aria-label="Browse Coin Counters and Sorters"></a>
-            <a class="hero-hotspot hotspot-cash" href="#marketplace" data-category="Big Cash Management" aria-label="Browse Big Cash Management"></a>
+            <a class="hero-hotspot hotspot-counter" href="catalog.html?category=Bill%20Counters" aria-label="Browse Bill Counters"></a>
+            <a class="hero-hotspot hotspot-sorter" href="catalog.html?category=Bill%20Sorters%20%26%20Discriminators" aria-label="Browse Bill Sorters and Discriminators"></a>
+            <a class="hero-hotspot hotspot-coin" href="catalog.html?category=Coin%20Counters%20%26%20Sorters" aria-label="Browse Coin Counters and Sorters"></a>
+            <a class="hero-hotspot hotspot-cash" href="catalog.html?category=Big%20Cash%20Management" aria-label="Browse Big Cash Management"></a>
           </div>
 
           <div class="category-dock" aria-label="Equipment categories">
-            <a href="#marketplace" data-category="Bill Counters"><span class="dock-icon">▤</span><span>Bill Counters</span><b>›</b></a>
-            <a href="#marketplace" data-category="Bill Sorters & Discriminators"><span class="dock-icon">▥</span><span>Bill Sorters &amp;<br>Discriminators</span><b>›</b></a>
-            <a href="#marketplace" data-category="Coin Counters & Sorters"><span class="dock-icon">◉</span><span>Coin Counters &amp;<br>Sorters</span><b>›</b></a>
-            <a href="#marketplace" data-category="Big Cash Management"><span class="dock-icon">♢</span><span>Big Cash<br>Management</span><b>›</b></a>
+            <a href="catalog.html?category=Bill%20Counters"><span class="dock-icon">▤</span><span>Bill Counters</span><b>›</b></a>
+            <a href="catalog.html?category=Bill%20Sorters%20%26%20Discriminators"><span class="dock-icon">▥</span><span>Bill Sorters<br>&amp; Discriminators</span><b>›</b></a>
+            <a href="catalog.html?category=Coin%20Counters%20%26%20Sorters"><span class="dock-icon">◉</span><span>Coin Counters &amp;<br>Sorters</span><b>›</b></a>
+            <a href="catalog.html?category=Big%20Cash%20Management"><span class="dock-icon">♢</span><span>Big Cash<br>Management</span><b>›</b></a>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
     <section class="markets shell" id="markets">
       <h2>Find suppliers by market</h2>
       <div class="market-buttons">
-        <a href="#marketplace" data-market="USA"><span>🇺🇸</span> USA</a><a href="#marketplace" data-market="UK"><span>🇬🇧</span> UK</a><a href="#marketplace" data-market="France"><span>🇫🇷</span> FR</a><a href="#marketplace" data-market="Japan"><span>🇯🇵</span> JP</a><a href="#marketplace" data-market="Argentina"><span>🇦🇷</span> ARG</a>
+        <a href="catalog.html?market=USA"><span>🇺🇸</span> USA</a><a href="catalog.html?market=UK"><span>🇬🇧</span> UK</a><a href="catalog.html?market=France"><span>🇫🇷</span> FR</a><a href="catalog.html?market=Japan"><span>🇯🇵</span> JP</a><a href="catalog.html?market=Argentina"><span>🇦🇷</span> ARG</a>
         <button type="button" id="worldwide-toggle"><span>◎</span> Worldwide Suppliers</button>
         <button type="button" id="markets-toggle"><span>⊞</span> Other Markets</button>
       </div>
@@ -84,9 +84,9 @@
       <h2>Trusted suppliers. Reliable partnerships.</h2>
       <div class="trust-grid">
         <article><span class="medal verified">✓</span><h3>Verified Supplier</h3><p>Passed identity and<br>business verification.</p></article>
-        <article><span class="medal silver">★</span><h3>Silver Supplier</h3><p>Proven track record of<br>quality and service.</p></article>
-        <article><span class="medal gold">★</span><h3>Gold Supplier</h3><p>High performance in<br>delivery and ratings.</p></article>
-        <article><span class="medal top">★</span><h3>Top-Rated Supplier</h3><p>Top ratings from buyers<br>worldwide.</p></article>
+        <article><span class="medal silver">◆</span><h3>Silver Supplier</h3><p>Established business<br>track record.</p></article>
+        <article><span class="medal gold">✦</span><h3>Gold Supplier</h3><p>Strong record of quality<br>and service.</p></article>
+        <article><span class="medal top">♛</span><h3>Top-Rated Supplier</h3><p>Reserved for verified<br>buyer feedback.</p></article>
       </div>
 
       <div class="service-points">

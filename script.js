@@ -9,42 +9,31 @@ function toggleList(target, other) {
   target.hidden = !target.hidden;
   other.hidden = true;
 }
-worldwideToggle.addEventListener('click', () => toggleList(worldwideList, marketsList));
-marketsToggle.addEventListener('click', () => toggleList(marketsList, worldwideList));
+
+if (worldwideToggle && worldwideList && marketsList) {
+  worldwideToggle.addEventListener('click', () => toggleList(worldwideList, marketsList));
+}
+
+if (marketsToggle && marketsList && worldwideList) {
+  marketsToggle.addEventListener('click', () => toggleList(marketsList, worldwideList));
+}
 
 const supplierToggle = byId('supplier-form-toggle');
 const supplierForm = byId('supplier-form');
-supplierToggle.addEventListener('click', () => {
-  supplierForm.hidden = !supplierForm.hidden;
-});
-
-byId('market-search').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const term = byId('equipment-search').value.trim();
-  const category = byId('category-search').value;
-  const feedback = byId('search-feedback');
-  if (!term && !category) {
-    feedback.textContent = 'Choose a category or enter an equipment, brand or supplier.';
-    return;
-  }
-  feedback.textContent = `Marketplace search ready: ${term || category}. Product listings will appear here as suppliers join.`;
-  byId('marketplace').scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-
-document.querySelectorAll('[data-category]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const category = link.dataset.category;
-    byId('equipment-search').value = category;
-    byId('search-feedback').textContent = `${category}: category selected. Listings will appear as the marketplace catalogue is populated.`;
+if (supplierToggle && supplierForm) {
+  supplierToggle.addEventListener('click', () => {
+    supplierForm.hidden = !supplierForm.hidden;
   });
-});
+}
 
-document.querySelectorAll('[data-market]').forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelectorAll('[data-market]').forEach((item) => item.classList.remove('is-selected'));
-    link.classList.add('is-selected');
-    worldwideList.hidden = true;
-    marketsList.hidden = true;
-    byId('search-feedback').textContent = `${link.dataset.market}: market route selected. Listings will appear as verified suppliers join.`;
+const marketSearch = byId('market-search');
+if (marketSearch) {
+  marketSearch.addEventListener('submit', (event) => {
+    const term = byId('equipment-search').value.trim();
+    const category = byId('category-search').value;
+    if (!term && !category) {
+      event.preventDefault();
+      byId('search-feedback').textContent = 'Enter an equipment, brand or supplier, or choose a category.';
+    }
   });
-});
+}

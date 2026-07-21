@@ -20,6 +20,24 @@
         <a href="catalog.html#markets">Find Suppliers</a>
         <a href="index.html#resources">Resources</a>
       </nav>
+      <div class="header-tools" aria-label="Marketplace tools">
+        <button class="icon-control" id="language-toggle" type="button" aria-label="Interface language" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.4 3.7 5.2 3.7 8.5S14.5 18.1 12 20.5C9.5 18.1 8.3 15.3 8.3 12S9.5 5.9 12 3.5Z"/></svg>
+        </button>
+        <a class="icon-control" href="buyer-dashboard.html" aria-label="Favorites">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 8.3c0 4.7-8.6 9.6-8.6 9.6S3.4 13 3.4 8.3A4.2 4.2 0 0 1 11 5.8L12 7l1-1.2a4.2 4.2 0 0 1 7.6 2.5Z"/></svg>
+        </a>
+        <a class="icon-control" href="auth.html" aria-label="Account access">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.8 20c.6-4 3.1-6 7.2-6s6.6 2 7.2 6"/></svg>
+        </a>
+        <div class="tool-popover" id="language-menu" hidden>
+          <strong>Interface language</strong>
+          <span>English <b>Current</b></span>
+          <span>Français <em>Planned</em></span>
+          <span>Español <em>Planned</em></span>
+        </div>
+        <p class="tool-notice" id="tool-notice" role="status" hidden></p>
+      </div>
     </div>
   </header>
 
@@ -31,12 +49,13 @@
       <p class="eyebrow">How the live marketplace will work</p>
       <h2>Buy Now leads to direct seller contact.</h2>
       <p>When a verified supplier publishes this product, the buyer will receive the seller’s contact details after clicking <strong>Buy Now</strong>, then arrange payment and delivery directly with that seller.</p>
-      <button id="buy-now" type="button">Buy Now <span>›</span></button>
-      <p id="buy-now-note" hidden>There is no live supplier attached to this template yet. The direct-contact flow will be activated only after supplier verification.</p>
+      <div class="product-actions"><button id="buy-now" type="button">Buy Now <span>›</span></button><button id="save-favorite" class="outline-button" type="button">♡ Save favorite</button></div>
+      <p id="buy-now-note" hidden></p>
     </section>
   </main>
 
   <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer>
+  <script src="script.js"></script>
   <script src="catalog-data.js"></script>
   <script src="product.js"></script>
 </body>

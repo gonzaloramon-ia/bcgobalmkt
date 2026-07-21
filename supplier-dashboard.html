@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5fbff"><title>Supplier Dashboard | BillCounter Global Marketplace</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span></a><nav class="main-nav"><a href="catalog.html">Browse Categories</a><a href="catalog.html#markets">Find Suppliers</a><a href="index.html#resources">Resources</a></nav></div></header>
+  <main class="dashboard shell">
+    <div class="dashboard-top"><div><p class="eyebrow">Supplier workspace</p><h1>Manage your marketplace presence.</h1><p id="account-state">No local demo account</p></div><a class="secondary-button" href="supplier-onboarding.html">Business profile</a></div>
+    <section class="status-cards"><article><span>01</span><h2>Profile review</h2><p>Business verification must be complete before listings can go live.</p><strong>Pending setup</strong></article><article><span>02</span><h2>Listings</h2><p>Draft product data can be prepared before approval.</p><strong>Draft mode</strong></article><article><span>03</span><h2>Supplier tier</h2><p>Reputation begins with Verified Supplier status.</p><strong>Not assigned</strong></article></section>
+    <section class="workspace-grid">
+      <section class="workspace-card"><p class="eyebrow">Product publishing</p><h2>Create a listing draft</h2><form class="stack-form" id="supplier-listing-form"><label>Product name<input name="name" required placeholder="Product or model name"></label><label>Category<select name="category"><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label><label>Brand<input name="brand" placeholder="Equipment brand"></label><label>Price<select name="priceType"><option>Visible price</option><option>Price on request</option></select></label><label>Markets<input name="markets" placeholder="USA, France, worldwide..."></label><button type="submit" class="primary-button">Save draft <span>›</span></button></form><p class="form-result" id="listing-result" hidden></p></section>
+      <section class="workspace-card"><p class="eyebrow">Draft queue</p><h2>Your listing drafts</h2><ul class="workspace-list" id="supplier-listings"></ul><p class="workspace-note">Publishing remains disabled until a profile and listing are approved.</p></section>
+    </section>
+  </main>
+  <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer><script src="marketplace-app.js"></script>
+</body>
+</html>

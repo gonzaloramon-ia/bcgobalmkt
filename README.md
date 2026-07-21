@@ -15,3 +15,8 @@ Static first-pass interface for the global cash-handling equipment network.
 2. Replace the CSS equipment placeholders with approved product imagery.
 3. Confirm the real contact endpoint for the request form.
 4. Add verified supplier cards and country pages after the partner model is defined.
+# BillCounter Global Marketplace
+
+Static front-end prototype for the international cash-handling marketplace.
+
+See `ARCHITECTURE.md` for the planned marketplace entities, rules and backend transition.

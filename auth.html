@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Buyer and supplier account access for BillCounter Global Marketplace.">
+  <meta name="theme-color" content="#f5fbff">
+  <title>Account Access | BillCounter Global Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span></a>
+    <nav class="main-nav"><a href="catalog.html">Browse Categories</a><a href="catalog.html#markets">Find Suppliers</a><a href="index.html#resources">Resources</a></nav>
+  </div></header>
+  <main class="access-page shell">
+    <div class="access-intro"><p class="eyebrow">Marketplace access</p><h1>Choose how you use the marketplace.</h1><p>Buyers save equipment and contact sellers. Suppliers apply for verification before they can publish products.</p></div>
+    <div class="access-grid">
+      <section class="access-card buyer"><span>◉</span><h2>Buyer account</h2><p>Save products, compare options and access seller contact details through the Buy Now flow.</p><ul><li>Favorites</li><li>Purchase-intent history</li><li>Direct seller contact</li></ul></section>
+      <section class="access-card supplier"><span>▤</span><h2>Supplier account</h2><p>Submit your business for review, then publish approved cash-handling equipment listings.</p><ul><li>Verified supplier profile</li><li>Listing management</li><li>Market and lead visibility</li></ul></section>
+    </div>
+    <section class="account-form-card">
+      <div><p class="eyebrow">Prototype access</p><h2>Create a local demo account</h2><p>This is the front-end flow. Production access will use secure authentication and a database.</p></div>
+      <form id="account-form" class="stack-form">
+        <label>Your name<input name="name" required placeholder="Your name"></label>
+        <label>Business email<input name="email" type="email" required placeholder="you@company.com"></label>
+        <label>I am joining as<select name="role"><option value="buyer">Buyer</option><option value="supplier">Supplier</option></select></label>
+        <button type="submit" class="primary-button">Continue <span>›</span></button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer>
+  <script src="marketplace-app.js"></script>
+</body>
+</html>

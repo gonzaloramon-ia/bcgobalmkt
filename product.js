@@ -20,5 +20,17 @@ detail.innerHTML = `
   </div>`;
 
 document.getElementById('buy-now').addEventListener('click', () => {
-  document.getElementById('buy-now-note').hidden = false;
+  window.location.href = `buy.html?id=${encodeURIComponent(listing.id)}`;
+});
+
+document.getElementById('save-favorite').addEventListener('click', () => {
+  const state = JSON.parse(localStorage.getItem('bcglobal-demo-state') || '{"favorites":[]}');
+  state.favorites = state.favorites || [];
+  if (!state.favorites.some((item) => item.id === listing.id)) {
+    state.favorites.push({ id: listing.id, name: listing.name });
+    localStorage.setItem('bcglobal-demo-state', JSON.stringify(state));
+  }
+  const note = document.getElementById('buy-now-note');
+  note.textContent = 'Saved to local demo favorites. Buyer accounts will store this data securely in production.';
+  note.hidden = false;
 });

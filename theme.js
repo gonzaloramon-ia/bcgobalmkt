@@ -11,14 +11,11 @@
     document.documentElement.dataset.theme = theme;
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = theme === 'dark' ? '#091523' : '#f5fbff';
-    const button = document.querySelector('[data-theme-toggle]');
-    if (button) {
-      const dark = theme === 'dark';
-      button.setAttribute('aria-pressed', String(dark));
-      button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      button.title = dark ? 'Light mode' : 'Dark mode';
-      button.innerHTML = dark ? '☀' : '☾';
-    }
+    document.querySelectorAll('[data-theme-choice]').forEach((button) => {
+      const active = button.dataset.themeChoice === theme;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
   }
 
   applyTheme(preferredTheme());
@@ -33,16 +30,21 @@
       header.append(tools);
     }
 
-    const button = document.createElement('button');
-    button.className = 'icon-control theme-toggle';
-    button.type = 'button';
-    button.dataset.themeToggle = '';
-    button.addEventListener('click', () => {
-      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(key, next);
-      applyTheme(next);
+    const control = document.createElement('div');
+    control.className = 'theme-control';
+    control.setAttribute('aria-label', 'Color theme');
+    control.innerHTML = `
+      <span class="theme-label">Theme</span>
+      <button type="button" data-theme-choice="light" aria-label="Use light theme">☀ <span>Light</span></button>
+      <button type="button" data-theme-choice="dark" aria-label="Use dark theme">☾ <span>Dark</span></button>`;
+    control.querySelectorAll('[data-theme-choice]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const next = button.dataset.themeChoice;
+        localStorage.setItem(key, next);
+        applyTheme(next);
+      });
     });
-    tools.prepend(button);
+    tools.prepend(control);
     applyTheme(document.documentElement.dataset.theme);
   });
 })();

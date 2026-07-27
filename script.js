@@ -26,20 +26,6 @@ if (supplierToggle && supplierForm) {
   });
 }
 
-const languageToggle = byId('language-toggle');
-const languageMenu = byId('language-menu');
-const toolNotice = byId('tool-notice');
-
-if (languageToggle && languageMenu) {
-  languageToggle.addEventListener('click', () => {
-    const opening = languageMenu.hidden;
-    languageMenu.hidden = !opening;
-    languageToggle.setAttribute('aria-expanded', String(opening));
-    if (toolNotice) toolNotice.hidden = true;
-  });
-}
-
-
 const marketSearch = byId('market-search');
 if (marketSearch) {
   marketSearch.addEventListener('submit', (event) => {

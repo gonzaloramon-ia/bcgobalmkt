@@ -18,7 +18,11 @@ button,input,select{font:inherit}
 .icon-control{display:grid;place-items:center;width:30px;height:34px;padding:0;border:0;border-radius:6px;background:transparent;color:#092653;cursor:pointer}
 .icon-control:hover{background:#eaf7ff;color:#0870d9}
 .icon-control svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.theme-toggle{font-size:22px;line-height:1}
+.theme-control{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:8px;background:#f7fcff;color:#315778;font-size:11px;font-weight:760}
+.theme-label{padding:0 4px 0 5px;color:#547392}
+.theme-control button{display:flex;align-items:center;gap:3px;padding:4px 6px;border:0;border-radius:5px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.theme-control button:hover{background:#e5f5ff}
+.theme-control button.is-active{background:#1675e8;color:#fff;box-shadow:0 1px 3px rgba(5,72,145,.22)}
 .tool-popover{position:absolute;right:0;top:42px;z-index:35;display:grid;min-width:176px;padding:10px;border:1px solid #cde4f4;border-radius:9px;background:#fff;box-shadow:0 15px 32px rgba(13,82,134,.17)}
 .tool-popover strong{padding:2px 4px 7px;color:#235073;font-size:12px}
 .tool-popover span{display:flex;justify-content:space-between;gap:14px;padding:7px 4px;color:#264c72;font-size:13px}
@@ -171,6 +175,9 @@ button,input,select{font:inherit}
 .brand-mark{width:42px;height:44px;font-size:31px}
 .brand-copy strong{font-size:17px}
 .brand-copy small{font-size:10px}
+.theme-label,.theme-control button span{display:none}
+.theme-control{gap:1px;padding:2px}
+.theme-control button{padding:4px 6px;font-size:15px}
 .header-icons{gap:2px}
 .icon-button{font-size:21px}
 .showcase{padding-top:19px}
@@ -339,6 +346,9 @@ html[data-theme="dark"] .tool-popover,
 html[data-theme="dark"] .tool-notice{background:#102236;border-color:#2a4963;color:#d8eafd}
 html[data-theme="dark"] .tool-popover strong,
 html[data-theme="dark"] .tool-popover span{color:#d8eafd}
+html[data-theme="dark"] .theme-control{border-color:#294b67;background:#12283d;color:#b9d7ee}
+html[data-theme="dark"] .theme-label{color:#9fc1dc}
+html[data-theme="dark"] .theme-control button:hover{background:#1a3b57}
 
 /* Catalogue and listing templates */
 .main-nav .is-current{color:var(--blue)}

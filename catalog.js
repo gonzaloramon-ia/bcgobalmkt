@@ -14,13 +14,13 @@ const includesText = (listing, term) => {
 function listingCard(listing) {
   return `
     <article class="product-card">
-      <a class="product-visual ${listing.visual}" href="product.html?id=${listing.id}" aria-label="Open ${listing.name}"><span>Listing template</span></a>
+      <a class="product-visual ${listing.visual}" href="product.html?id=${listing.id}" aria-label="Open ${listing.name}"><span>Equipment type</span></a>
       <p class="product-category">${listing.category}</p>
       <h3><a href="product.html?id=${listing.id}">${listing.name}</a></h3>
       <p class="product-type">${listing.type}</p>
       <p class="product-description">${listing.description}</p>
-      <div class="listing-meta"><span class="supplier-tier">Verified profile required</span><span>Price supplied by seller</span></div>
-      <a class="product-action" href="product.html?id=${listing.id}">View listing template <b>›</b></a>
+      <div class="listing-meta"><span class="supplier-tier">Verified suppliers only</span><span>Price and availability on live listings</span></div>
+      <a class="product-action" href="product.html?id=${listing.id}">View equipment details <b>›</b></a>
     </article>`;
 }
 
@@ -56,9 +56,9 @@ function render() {
   summary.textContent = state.market
     ? `${state.market} market route selected. Supplier listings will appear after verification.`
     : 'Explore the product architecture for a marketplace dedicated exclusively to cash handling.';
-  label.textContent = `Catalogue framework${marketCopy}`;
-  heading.textContent = state.category ? `${state.category} listing templates` : 'Equipment listing templates';
-  document.getElementById('result-count').textContent = `${listings.length} template${listings.length === 1 ? '' : 's'}`;
+  label.textContent = `Equipment catalogue${marketCopy}`;
+  heading.textContent = state.category ? `${state.category} equipment types` : 'Equipment types';
+  document.getElementById('result-count').textContent = `${listings.length} result${listings.length === 1 ? '' : 's'}`;
   document.getElementById('product-grid').innerHTML = listings.map(listingCard).join('');
   document.getElementById('empty-results').hidden = listings.length > 0;
 }

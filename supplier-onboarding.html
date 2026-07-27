@@ -11,7 +11,12 @@
     <a class="back-link" href="auth.html">← Account access</a>
     <div class="onboarding-hero"><p class="eyebrow">Supplier onboarding</p><h1>Start with a verified business profile.</h1><p>Every supplier is reviewed before its first listing goes live. This protects buyers and gives reputation a real meaning.</p></div>
     <ol class="process-steps"><li><b>1</b> Business profile</li><li><b>2</b> Verification review</li><li><b>3</b> Publish listings</li></ol>
-    <form class="onboarding-form" id="supplier-application">
+    <div class="account-form-card">
+      <div><p class="eyebrow">Application form</p><h2>Tell us about your company.</h2><p>Complete the short supplier application. We review each profile before publishing listings.</p></div>
+      <div><a class="primary-button" href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Open supplier application <span>›</span></a></div>
+    </div>
+    <!-- Previous prototype fields remain documented below for the next backend phase. -->
+    <form class="onboarding-form" id="supplier-application" hidden>
       <fieldset><legend>Business identity</legend><label>Company name<input name="company" required placeholder="Your company"></label><label>Contact name<input name="contactName" required placeholder="Your name"></label><label>Business email<input name="email" type="email" required placeholder="you@company.com"></label><label>Company website<input name="website" type="url" placeholder="https://"></label></fieldset>
       <fieldset><legend>Marketplace profile</legend><label>Primary market<select name="primaryMarket"><option>United States</option><option>United Kingdom</option><option>France</option><option>Japan</option><option>Argentina</option><option>Other Market</option></select></label><label>Company type<select name="companyType"><option>Manufacturer</option><option>Authorized distributor</option><option>Distributor</option></select></label><label>Equipment focus<select name="equipmentFocus"><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label><label>Ships to<input name="shipsTo" placeholder="Countries or regions"></label></fieldset>
       <fieldset class="full-fieldset"><legend>Why should buyers trust your profile?</legend><label>Business summary<textarea name="summary" required rows="4" placeholder="Describe your business, equipment experience and service coverage."></textarea></label></fieldset>

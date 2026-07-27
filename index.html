@@ -3,59 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BillCounter Global Marketplace connects buyers with cash-handling equipment suppliers worldwide.">
+  <meta name="description" content="BillCounter Global Marketplace connects buyers with verified suppliers of bill counters, banknote sorters, coin equipment and cash-management technology.">
   <meta name="theme-color" content="#f5fbff">
-  <title>BillCounter Global Marketplace | Cash Handling</title>
+  <link rel="canonical" href="https://www.billcounterglobal.com/">
+  <title>BillCounter Global Marketplace | Cash-Handling Equipment</title>
   <meta property="og:title" content="BillCounter Global Marketplace">
-  <meta property="og:description" content="Connecting buyers and suppliers worldwide for cash-handling equipment.">
+  <meta property="og:description" content="A specialized global marketplace for cash-handling technology.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/cash-handling-hero-v1.png">
+  <meta property="og:url" content="https://www.billcounterglobal.com/">
+  <meta property="og:image" content="https://www.billcounterglobal.com/assets/cash-handling-hero-v1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"BillCounter Global Marketplace",
+    "url":"https://www.billcounterglobal.com/",
+    "description":"Specialized marketplace for cash-handling equipment.",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.billcounterglobal.com/catalog.html?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="BillCounter Global Marketplace home">
+      <a class="brand" href="index.html" aria-label="BillCounter Global Marketplace home">
         <span class="brand-mark" aria-hidden="true">B</span>
         <span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span>
       </a>
-
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="catalog.html">Browse Categories</a>
-        <a href="catalog.html#markets">Find Suppliers</a>
-        <a href="#resources">Resources</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
+      <nav class="main-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="catalog.html">Browse Equipment</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="supplier-onboarding.html">For Suppliers</a>
       </nav>
-      <div class="header-tools" aria-label="Marketplace tools">
-        <a class="icon-control" href="buyer-dashboard.html" aria-label="Favorites">
+      <div class="header-tools" aria-label="Site tools">
+        <a class="icon-control" href="buyer-dashboard.html" aria-label="Saved equipment">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 8.3c0 4.7-8.6 9.6-8.6 9.6S3.4 13 3.4 8.3A4.2 4.2 0 0 1 11 5.8L12 7l1-1.2a4.2 4.2 0 0 1 7.6 2.5Z"/></svg>
         </a>
-        <a class="icon-control" href="auth.html" aria-label="Account access">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.8 20c.6-4 3.1-6 7.2-6s6.6 2 7.2 6"/></svg>
-        </a>
       </div>
-
     </div>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="showcase" id="categories">
       <div class="shell">
         <form class="search-bar" id="market-search" role="search" action="catalog.html">
-          <label class="search-input"><span aria-hidden="true">⌕</span><input id="equipment-search" name="q" type="search" placeholder="Search cash-handling equipment, brands, suppliers..." autocomplete="off"></label>
-          <label class="search-select"><select id="category-search" name="category" aria-label="Category"><option value="">All Categories</option><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label>
+          <label class="search-input"><span aria-hidden="true">⌕</span><input id="equipment-search" name="q" type="search" placeholder="Search cash-handling equipment, brands, capabilities..." autocomplete="off"></label>
+          <label class="search-select"><span class="sr-only">Category</span><select id="category-search" name="category"><option value="">All Categories</option><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label>
           <button type="submit" class="search-submit" aria-label="Search">⌕</button>
         </form>
         <p class="search-feedback" id="search-feedback" role="status"></p>
 
         <div class="platform-wrap">
           <div class="hero-equipment" aria-label="Browse equipment categories">
-            <img src="assets/cash-handling-hero-v1.png" alt="Banknote counter, banknote sorter, coin sorter and cash management equipment on a display platform.">
+            <img src="assets/cash-handling-hero-v1.png" width="1672" height="941" fetchpriority="high" alt="Bill counter, banknote sorter, coin sorter and large cash-management equipment displayed on a platform.">
             <a class="hero-hotspot hotspot-counter" href="catalog.html?category=Bill%20Counters" aria-label="Browse Bill Counters"></a>
             <a class="hero-hotspot hotspot-sorter" href="catalog.html?category=Bill%20Sorters%20%26%20Discriminators" aria-label="Browse Bill Sorters and Discriminators"></a>
             <a class="hero-hotspot hotspot-coin" href="catalog.html?category=Coin%20Counters%20%26%20Sorters" aria-label="Browse Coin Counters and Sorters"></a>
             <a class="hero-hotspot hotspot-cash" href="catalog.html?category=Big%20Cash%20Management" aria-label="Browse Big Cash Management"></a>
           </div>
-
           <div class="category-dock" aria-label="Equipment categories">
             <a href="catalog.html?category=Bill%20Counters"><span class="dock-icon">▤</span><span>Bill Counters</span><b>›</b></a>
             <a href="catalog.html?category=Bill%20Sorters%20%26%20Discriminators"><span class="dock-icon">▥</span><span>Bill Sorters<br>&amp; Discriminators</span><b>›</b></a>
@@ -66,53 +81,62 @@
       </div>
     </section>
 
-    <section class="intro shell" id="marketplace">
+    <section class="intro shell">
+      <p class="eyebrow">One category. Global reach.</p>
       <h1>Specialized Marketplace<br>for Cash Handling.</h1>
-      <p>BillCounter Global connects businesses with verified suppliers of cash-handling equipment and solutions. Find the right technology. Build trusted partnerships. Grow your business.</p>
+      <p>Find cash-handling technology, compare equipment categories and connect with verified suppliers serving your market. BillCounter Global does not process payments or delivery: buyers and sellers agree those terms directly.</p>
     </section>
 
     <section class="markets shell" id="markets">
-      <h2>Find suppliers by market</h2>
+      <div class="section-heading"><div><p class="eyebrow">Global discovery</p><h2>Find suppliers by market</h2></div><a href="catalog.html">Browse all equipment →</a></div>
       <div class="market-buttons">
         <a href="catalog.html?market=USA"><span>🇺🇸</span> USA</a><a href="catalog.html?market=UK"><span>🇬🇧</span> UK</a><a href="catalog.html?market=France"><span>🇫🇷</span> FR</a><a href="catalog.html?market=Japan"><span>🇯🇵</span> JP</a><a href="catalog.html?market=Argentina"><span>🇦🇷</span> ARG</a>
-        <button type="button" id="worldwide-toggle"><span>◎</span> Worldwide Suppliers</button>
-        <button type="button" id="markets-toggle"><span>⊞</span> Other Markets</button>
+        <button type="button" id="worldwide-toggle" aria-expanded="false" aria-controls="worldwide-list"><span>◎</span> Worldwide Suppliers</button>
+        <button type="button" id="markets-toggle" aria-expanded="false" aria-controls="other-markets-list"><span>⊞</span> Other Markets</button>
       </div>
       <div class="market-dropdown" id="worldwide-list" hidden>
-        <strong>Suppliers shipping worldwide</strong>
-        <div class="supplier-pills"><span>Verified manufacturer</span><span>Gold supplier</span><span>Multi-market distributor</span><span>International support</span></div>
+        <strong>Worldwide supplier route</strong>
+        <p>Explore equipment from suppliers able to arrange international delivery. Coverage is confirmed on each live listing.</p>
+        <a href="catalog.html?market=Worldwide">Explore worldwide listings →</a>
       </div>
       <div class="market-dropdown country-list" id="other-markets-list" hidden>
-        <strong>Other Markets</strong>
-        <div><span>Germany</span><span>Italy</span><span>Spain</span><span>Portugal</span><span>Netherlands</span><span>Belgium</span><span>Switzerland</span><span>Sweden</span><span>Norway</span><span>Denmark</span><span>Poland</span><span>Turkey</span><span>Mexico</span><span>Brazil</span><span>Chile</span><span>Colombia</span><span>Peru</span><span>Australia</span><span>South Korea</span><span>India</span></div>
+        <strong>Other markets</strong>
+        <div><a href="catalog.html?market=Germany">Germany</a><a href="catalog.html?market=Italy">Italy</a><a href="catalog.html?market=Spain">Spain</a><a href="catalog.html?market=Portugal">Portugal</a><a href="catalog.html?market=Netherlands">Netherlands</a><a href="catalog.html?market=Belgium">Belgium</a><a href="catalog.html?market=Switzerland">Switzerland</a><a href="catalog.html?market=Sweden">Sweden</a><a href="catalog.html?market=Norway">Norway</a><a href="catalog.html?market=Denmark">Denmark</a><a href="catalog.html?market=Poland">Poland</a><a href="catalog.html?market=Turkey">Turkey</a><a href="catalog.html?market=Mexico">Mexico</a><a href="catalog.html?market=Brazil">Brazil</a><a href="catalog.html?market=Chile">Chile</a><a href="catalog.html?market=Colombia">Colombia</a><a href="catalog.html?market=Peru">Peru</a><a href="catalog.html?market=Australia">Australia</a><a href="catalog.html?market=South%20Korea">South Korea</a><a href="catalog.html?market=India">India</a></div>
       </div>
     </section>
 
-    <section class="trust shell" id="resources">
-      <h2>Trusted suppliers. Reliable partnerships.</h2>
+    <section class="trust shell" id="trust">
+      <div class="section-heading"><div><p class="eyebrow">Supplier reputation</p><h2>Trusted suppliers. Clear signals.</h2></div><a href="how-it-works.html#reputation">How reputation works →</a></div>
       <div class="trust-grid">
-        <article><span class="medal verified">✓</span><h3>Verified Supplier</h3><p>Passed identity and<br>business verification.</p></article>
-        <article><span class="medal silver">◆</span><h3>Silver Supplier</h3><p>Established business<br>track record.</p></article>
-        <article><span class="medal gold">✦</span><h3>Gold Supplier</h3><p>Strong record of quality<br>and service.</p></article>
-        <article><span class="medal top">♛</span><h3>Top-Rated Supplier</h3><p>Reserved for verified<br>buyer feedback.</p></article>
+        <article><span class="medal verified">✓</span><h3>Verified Supplier</h3><p>Identity and business information reviewed.</p></article>
+        <article><span class="medal silver">◆</span><h3>Silver Supplier</h3><p>Established marketplace activity and service record.</p></article>
+        <article><span class="medal gold">✦</span><h3>Gold Supplier</h3><p>Strong delivery, response and buyer-feedback record.</p></article>
+        <article><span class="medal top">♛</span><h3>Top-Rated Supplier</h3><p>Consistently high verified-buyer feedback.</p></article>
       </div>
-
       <div class="service-points">
-        <div><span>◎</span><p><strong>Specialized Marketplace</strong>Cash-handling equipment only,<br>across international markets.</p></div>
-        <div><span>♢</span><p><strong>Verified Profiles</strong>Supplier review and reputation<br>before product listings go live.</p></div>
-        <div><span>↗</span><p><strong>Direct Connection</strong>Contact the seller to arrange<br>payment and delivery.</p></div>
+        <div><span>◎</span><p><strong>Dedicated Marketplace</strong>Cash-handling technology only.</p></div>
+        <div><span>♢</span><p><strong>Reviewed Profiles</strong>Suppliers are checked before publishing.</p></div>
+        <div><span>↗</span><p><strong>Direct Connection</strong>Arrange payment and delivery with the seller.</p></div>
       </div>
     </section>
 
     <section class="partner shell" id="partner">
       <div class="partner-symbol" aria-hidden="true">⌂</div>
-      <div><h2>Are you a manufacturer or distributor?</h2><p>Join BillCounter Global and grow your business with qualified buyers from around the world.</p></div>
-      <a class="partner-button" href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Supplier onboarding <span>›</span></a>
-      <ul><li>Increase global visibility</li><li>Generate quality leads</li><li>Build trusted relationships</li><li>Grow your business</li></ul>
+      <div><p class="eyebrow">For manufacturers and distributors</p><h2>Reach qualified international buyers.</h2><p>Apply for supplier review and publish cash-handling equipment after approval.</p></div>
+      <a class="partner-button" href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Supplier application <span>›</span></a>
+      <ul><li>Global visibility</li><li>Qualified inquiries</li><li>Reputation tiers</li><li>Direct buyer contact</li></ul>
     </section>
   </main>
 
-  <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="footer-brand" href="index.html"><span class="brand-mark">B</span><strong>BillCounter Global Marketplace</strong></a><p>A specialized discovery and connection platform for cash-handling technology.</p></div>
+      <nav aria-label="Marketplace links"><strong>Marketplace</strong><a href="catalog.html">Browse equipment</a><a href="how-it-works.html">How it works</a><a href="buyer-dashboard.html">Saved equipment</a></nav>
+      <nav aria-label="Supplier links"><strong>Suppliers</strong><a href="supplier-onboarding.html">Supplier onboarding</a><a href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Apply now</a><a href="mailto:billcounter.srl@gmail.com">Contact</a></nav>
+      <nav aria-label="Legal links"><strong>Information</strong><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+    <div class="shell footer-bottom">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</div>
+  </footer>
   <script src="script.js"></script>
   <script src="theme.js"></script>
 </body>

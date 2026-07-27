@@ -1,16 +1,15 @@
 # BillCounter Global Marketplace — MVP architecture
 
-## Front-end routes
+## Current static MVP routes
 
 - `index.html` — marketplace home
 - `catalog.html` — categories, market routes and listing templates
-- `product.html` — individual product listing template
-- `buy.html` — purchase-intent / direct-contact flow
-- `auth.html` — buyer and supplier entry point
-- `buyer-dashboard.html` — favorites and buyer workspace
-- `supplier-onboarding.html` — supplier verification application
-- `supplier-dashboard.html` — listing-draft workspace
-- `admin-dashboard.html` — internal supplier/listing review queue
+- `product.html` — equipment-type detail
+- `buy.html` — structured buyer inquiry routed by email
+- `buyer-dashboard.html` — local saved-equipment shortlist
+- `supplier-onboarding.html` — supplier application through Google Forms
+- `how-it-works.html` — marketplace and reputation model
+- `about.html`, `terms.html`, `privacy.html` — information and policy pages
 
 ## Production entities
 
@@ -30,6 +29,6 @@
 - Reputation derives from verified marketplace activity, not self-declared claims.
 - Administrator actions require a protected role; the public prototype page is only a workflow model.
 
-## Backend phase
+## Future backend phase
 
-Replace browser-local prototype storage with authentication, database tables, file uploads, audit logs, role permissions and email notifications. The current page flow is deliberately aligned with those entities so the interface does not need to be redesigned later.
+Add authentication, database tables, listing management, file uploads, audit logs, protected role permissions and email notifications when the supplier network justifies the operational complexity. Saved equipment can then migrate from browser-local storage to buyer accounts, and inquiries can be routed without relying on the buyer's email client.

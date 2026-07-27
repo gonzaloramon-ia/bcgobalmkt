@@ -1,30 +1,12 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Supplier onboarding for BillCounter Global Marketplace."><meta name="theme-color" content="#f5fbff">
-  <title>Supplier Onboarding | BillCounter Global Marketplace</title><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span></a><nav class="main-nav"><a href="catalog.html">Browse Categories</a><a href="catalog.html#markets">Find Suppliers</a><a href="index.html#resources">Resources</a></nav></div></header>
-  <main class="onboarding-page shell">
-    <a class="back-link" href="auth.html">← Account access</a>
-    <div class="onboarding-hero"><p class="eyebrow">Supplier onboarding</p><h1>Start with a verified business profile.</h1><p>Every supplier is reviewed before its first listing goes live. This protects buyers and gives reputation a real meaning.</p></div>
-    <ol class="process-steps"><li><b>1</b> Business profile</li><li><b>2</b> Verification review</li><li><b>3</b> Publish listings</li></ol>
-    <div class="account-form-card">
-      <div><p class="eyebrow">Application form</p><h2>Tell us about your company.</h2><p>Complete the short supplier application. We review each profile before publishing listings.</p></div>
-      <div><a class="primary-button" href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Open supplier application <span>›</span></a></div>
-    </div>
-    <!-- Previous prototype fields remain documented below for the next backend phase. -->
-    <form class="onboarding-form" id="supplier-application" hidden>
-      <fieldset><legend>Business identity</legend><label>Company name<input name="company" required placeholder="Your company"></label><label>Contact name<input name="contactName" required placeholder="Your name"></label><label>Business email<input name="email" type="email" required placeholder="you@company.com"></label><label>Company website<input name="website" type="url" placeholder="https://"></label></fieldset>
-      <fieldset><legend>Marketplace profile</legend><label>Primary market<select name="primaryMarket"><option>United States</option><option>United Kingdom</option><option>France</option><option>Japan</option><option>Argentina</option><option>Other Market</option></select></label><label>Company type<select name="companyType"><option>Manufacturer</option><option>Authorized distributor</option><option>Distributor</option></select></label><label>Equipment focus<select name="equipmentFocus"><option>Bill Counters</option><option>Bill Sorters &amp; Discriminators</option><option>Coin Counters &amp; Sorters</option><option>Big Cash Management</option></select></label><label>Ships to<input name="shipsTo" placeholder="Countries or regions"></label></fieldset>
-      <fieldset class="full-fieldset"><legend>Why should buyers trust your profile?</legend><label>Business summary<textarea name="summary" required rows="4" placeholder="Describe your business, equipment experience and service coverage."></textarea></label></fieldset>
-      <div class="form-submit-row"><p>Submitting this prototype form stores a local demonstration only. In production, it opens an internal verification queue.</p><button class="primary-button" type="submit">Submit for review <span>›</span></button></div>
-      <p class="form-result" id="application-result" hidden></p>
-    </form>
-    <a class="text-link" href="supplier-dashboard.html">View supplier dashboard prototype →</a>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Apply to become a verified supplier on BillCounter Global Marketplace."><meta name="theme-color" content="#f5fbff"><link rel="canonical" href="https://www.billcounterglobal.com/supplier-onboarding.html"><title>Become a Supplier | BillCounter Global Marketplace</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body>
+  <a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-copy"><strong>BillCounter Global Marketplace</strong><small>Connecting Buyers &amp; Suppliers Worldwide.</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button><nav class="main-nav" id="primary-nav"><a href="catalog.html">Browse Equipment</a><a href="how-it-works.html">How It Works</a><a class="is-current" href="supplier-onboarding.html">For Suppliers</a></nav></div></header>
+  <main class="onboarding-page shell" id="main-content">
+    <div class="onboarding-hero"><p class="eyebrow">Supplier onboarding</p><h1>Reach buyers searching for cash-handling technology.</h1><p>BillCounter Global is a dedicated marketplace. Supplier profiles are reviewed before equipment can be published.</p></div>
+    <ol class="process-steps"><li><b>1</b> Submit company details</li><li><b>2</b> Complete verification</li><li><b>3</b> Publish approved listings</li></ol>
+    <section class="supplier-benefits"><article><span>◎</span><h2>Focused visibility</h2><p>Reach buyers already searching within the cash-handling category.</p></article><article><span>◇</span><h2>Reputation signals</h2><p>Build trust through verification, marketplace activity and buyer feedback.</p></article><article><span>↗</span><h2>Direct inquiries</h2><p>Agree payment and delivery directly with the buyer.</p></article></section>
+    <section class="account-form-card supplier-apply"><div><p class="eyebrow">Application</p><h2>Submit your supplier profile.</h2><p>The form asks for your company, market coverage and contact details. Submission does not guarantee approval.</p></div><div><a class="primary-button large-button" href="https://forms.gle/TkAvEChdgiLozyor5" target="_blank" rel="noopener">Open supplier application <span>›</span></a><p class="external-note">Opens the official BillCounter Global supplier form.</p></div></section>
+    <section class="application-criteria"><h2>Before you apply</h2><ul><li>Use a business email you actively monitor.</li><li>State your supplier country and the markets you can serve.</li><li>Provide accurate company information for verification.</li><li>Listings remain unpublished until review is complete.</li></ul><p>Questions? <a href="mailto:billcounter.srl@gmail.com">billcounter.srl@gmail.com</a></p></section>
   </main>
-  <footer class="site-footer">© 2026 BillCounter Global Marketplace · A Punto Smart Group company</footer><script src="marketplace-app.js"></script><script src="theme.js"></script>
-</body>
-</html>
+  <footer class="site-footer simple-footer"><div class="shell footer-bottom"><a href="catalog.html">Catalogue</a><a href="how-it-works.html">How it works</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><span>© 2026 BillCounter Global Marketplace</span></div></footer><script src="theme.js"></script>
+</body></html>

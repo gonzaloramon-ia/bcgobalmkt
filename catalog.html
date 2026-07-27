@@ -36,13 +36,21 @@
       <aside class="catalog-sidebar" id="markets">
         <h2>Supplier market</h2>
         <div class="market-filter-list"><a href="catalog.html?market=USA">🇺🇸 USA</a><a href="catalog.html?market=UK">🇬🇧 UK</a><a href="catalog.html?market=France">🇫🇷 France</a><a href="catalog.html?market=Japan">🇯🇵 Japan</a><a href="catalog.html?market=Argentina">🇦🇷 Argentina</a><a href="catalog.html?market=Worldwide">◎ Worldwide</a></div>
-        <details><summary>Other markets</summary><div class="sidebar-market-links"><a href="catalog.html?market=Germany">Germany</a><a href="catalog.html?market=Italy">Italy</a><a href="catalog.html?market=Spain">Spain</a><a href="catalog.html?market=Brazil">Brazil</a><a href="catalog.html?market=Mexico">Mexico</a><a href="catalog.html?market=Australia">Australia</a><a href="catalog.html?market=India">India</a></div></details>
-        <div class="filter-panel"><h2>Listing information</h2><p>Supplier country</p><p>Ships to</p><p>Equipment brand</p><p>Supplier reputation</p><p>Price range</p><small>These attributes appear on live supplier listings.</small></div>
+        <details><summary>Other markets</summary><div class="sidebar-market-links"><a href="catalog.html?market=Germany">🇩🇪 Germany</a><a href="catalog.html?market=Italy">🇮🇹 Italy</a><a href="catalog.html?market=Spain">🇪🇸 Spain</a><a href="catalog.html?market=Portugal">🇵🇹 Portugal</a><a href="catalog.html?market=Netherlands">🇳🇱 Netherlands</a><a href="catalog.html?market=Belgium">🇧🇪 Belgium</a><a href="catalog.html?market=Switzerland">🇨🇭 Switzerland</a><a href="catalog.html?market=Sweden">🇸🇪 Sweden</a><a href="catalog.html?market=Norway">🇳🇴 Norway</a><a href="catalog.html?market=Denmark">🇩🇰 Denmark</a><a href="catalog.html?market=Poland">🇵🇱 Poland</a><a href="catalog.html?market=Turkey">🇹🇷 Turkey</a><a href="catalog.html?market=Mexico">🇲🇽 Mexico</a><a href="catalog.html?market=Brazil">🇧🇷 Brazil</a><a href="catalog.html?market=Chile">🇨🇱 Chile</a><a href="catalog.html?market=Colombia">🇨🇴 Colombia</a><a href="catalog.html?market=Peru">🇵🇪 Peru</a><a href="catalog.html?market=Australia">🇦🇺 Australia</a><a href="catalog.html?market=South%20Korea">🇰🇷 South Korea</a><a href="catalog.html?market=India">🇮🇳 India</a></div></details>
+        <form class="filter-panel" id="listing-filters">
+          <div class="filter-panel-head"><h2>Listing filters</h2><button type="button" id="clear-listing-filters" hidden>Clear</button></div>
+          <label>Supplier country<select data-listing-filter="supplierCountry" aria-label="Supplier country"><option value="">Any country</option></select></label>
+          <label>Ships to<select data-listing-filter="shipsTo" aria-label="Ships to"><option value="">Any destination</option></select></label>
+          <label>Equipment brand<input data-listing-filter="brand" type="search" placeholder="Search brand" autocomplete="off"></label>
+          <label>Supplier reputation<select data-listing-filter="reputation" aria-label="Supplier reputation"><option value="">Any reputation</option><option value="Verified">Verified</option><option value="Silver">Silver</option><option value="Gold">Gold</option><option value="Top-Rated">Top-Rated</option></select></label>
+          <label>Price range<select data-listing-filter="priceRange" aria-label="Price range"><option value="">Any price</option><option value="under-1000">Under USD 1,000</option><option value="1000-5000">USD 1,000–5,000</option><option value="over-5000">Over USD 5,000</option></select></label>
+          <small id="listing-filter-help">Use these filters on verified supplier listings as they are added.</small>
+        </form>
       </aside>
       <section class="catalog-results" aria-live="polite">
         <div class="catalog-results-head"><div><p class="eyebrow" id="result-label">Equipment catalogue</p><h2 id="result-heading">Equipment types</h2></div><p class="result-count" id="result-count"></p></div>
         <p class="catalog-notice">The current catalogue presents equipment types while verified suppliers are onboarded. Product brands, prices and availability will only appear on approved listings.</p>
-        <div class="product-grid" id="product-grid"></div><div class="empty-results" id="empty-results" hidden>No equipment matches this search.</div>
+        <div class="product-grid" id="product-grid"></div><div class="empty-results" id="empty-results" hidden></div>
       </section>
     </section>
     <section class="shell category-map"><p class="eyebrow">Catalogue structure</p><h2>Clear categories, without overlap.</h2><div id="category-map-grid" class="category-map-grid"></div></section>

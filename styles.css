@@ -372,9 +372,13 @@ html[data-theme="dark"] .theme-control button:hover{background:#1a3b57}
 .catalog-sidebar details{margin-top:11px;padding-top:11px;border-top:1px solid #d7eaf5;color:#315a80;font-size:12px}
 .catalog-sidebar summary{cursor:pointer;font-weight:800}
 .catalog-sidebar details p{margin:8px 0 0;line-height:1.55}
-.filter-panel{margin-top:24px;padding-top:18px;border-top:1px solid #d7eaf5}
-.filter-panel p{margin:7px 0;color:#62809d;font-size:13px}
-.filter-panel p:before{content:"○";margin-right:8px;color:#0f7ee5}
+.filter-panel{display:grid;gap:10px;margin-top:24px;padding-top:18px;border-top:1px solid #d7eaf5}
+.filter-panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.filter-panel-head h2{margin:0!important}
+.filter-panel-head button{padding:3px 7px;border:0;border-radius:5px;background:#e8f7ff;color:#0870cc;font:inherit;font-size:11px;font-weight:800;cursor:pointer}
+.filter-panel label{display:grid;gap:5px;color:#466987;font-size:11px;font-weight:800}
+.filter-panel input,.filter-panel select{width:100%;min-height:35px;padding:0 9px;border:1px solid #cfe4f2;border-radius:6px;background:#fff;color:#244b70;font:inherit;font-size:12px;outline:0}
+.filter-panel input:focus,.filter-panel select:focus{border-color:#117ee0;box-shadow:0 0 0 3px rgba(17,126,224,.12)}
 .catalog-results-head{display:flex;justify-content:space-between;gap:16px;align-items:end}
 .catalog-results-head h2{margin:3px 0 0;font-size:28px;letter-spacing:-.045em}
 .result-count{margin:0;color:#537394;font-size:13px;font-weight:700;white-space:nowrap}
@@ -641,8 +645,19 @@ html[data-theme="dark"] .supplier-benefits p,
 html[data-theme="dark"] .legal-page p{color:#a9c6df}
 html[data-theme="dark"] .country-list a,
 html[data-theme="dark"] .sidebar-market-links a{background:#153149;color:#b9dcf5}
+html[data-theme="dark"] .filter-panel input,
+html[data-theme="dark"] .filter-panel select{border-color:#29465e;background:#0a1725;color:#dceeff}
+html[data-theme="dark"] .filter-panel label,
+html[data-theme="dark"] .filter-panel small{color:#a9c6df}
+html[data-theme="dark"] .filter-panel-head button{background:#153149;color:#aee0ff}
+html[data-theme="dark"] .workspace-card{background:#0e1d2d;border-color:#23415a}
+html[data-theme="dark"] .workspace-card h2{color:#edf6ff}
+html[data-theme="dark"] .workspace-list li{border-color:#29465e;color:#b9d5ec}
+html[data-theme="dark"] .workspace-list li strong{color:#edf6ff}
+html[data-theme="dark"] .workspace-note{color:#a9c6df}
 html[data-theme="dark"] .reputation-table{border-color:#29465e}
 html[data-theme="dark"] .reputation-table div{border-color:#29465e}
+.reputation-table .medal{width:46px;height:46px;margin:0 0 4px;font-size:22px}
 html[data-theme="dark"] .menu-toggle{border-color:#294b67;color:#edf6ff}
 
 @media(max-width:850px){

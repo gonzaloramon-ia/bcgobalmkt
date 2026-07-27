@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# Utility pages are marked noindex in their HTML because they are not search landing pages.
+
 Sitemap: https://www.billcounterglobal.com/sitemap.xml

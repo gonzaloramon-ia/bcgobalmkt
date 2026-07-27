@@ -5,17 +5,19 @@ const worldwideList = byId('worldwide-list');
 const marketsToggle = byId('markets-toggle');
 const marketsList = byId('other-markets-list');
 
-function toggleList(target, other) {
+function toggleList(target, other, trigger, otherTrigger) {
   target.hidden = !target.hidden;
   other.hidden = true;
+  trigger.setAttribute('aria-expanded', String(!target.hidden));
+  otherTrigger?.setAttribute('aria-expanded', 'false');
 }
 
 if (worldwideToggle && worldwideList && marketsList) {
-  worldwideToggle.addEventListener('click', () => toggleList(worldwideList, marketsList));
+  worldwideToggle.addEventListener('click', () => toggleList(worldwideList, marketsList, worldwideToggle, marketsToggle));
 }
 
 if (marketsToggle && marketsList && worldwideList) {
-  marketsToggle.addEventListener('click', () => toggleList(marketsList, worldwideList));
+  marketsToggle.addEventListener('click', () => toggleList(marketsList, worldwideList, marketsToggle, worldwideToggle));
 }
 
 const supplierToggle = byId('supplier-form-toggle');
